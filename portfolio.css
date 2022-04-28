@@ -1,0 +1,319 @@
+:root{
+    --body-color:#46344E;
+    --secondary-color:#382a3f;
+    --text-color: white;
+    --about-color-outer:#241a29;
+    --about-color-inner:black;
+    --theme-color:white;
+    --theme-div-border:white;
+}
+
+
+
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:var(--body-color);
+    color: var(--text-color);
+}
+
+
+html{
+  
+    scroll-behavior: smooth;
+    
+}
+
+
+.flex{
+    padding: 50px;
+    margin-bottom: 70px;
+    font-size: 1.6rem;
+    line-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--secondary-color) ;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px #382a3f;
+}
+
+
+ span{
+    display: inline-block;
+    font-size: 40px;
+}
+
+.theme{
+     padding: 10px;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+.theme > div{
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.theme > div  div{
+    border: 3px solid var(--theme-div-border);
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme p{
+    display: inline;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.theme > div div:hover{
+    transform: scale(1.2);
+}
+
+.theme > div div:nth-child(1){
+    background-color:#606B56 ;
+}
+
+.theme > div div:nth-child(2){
+    background-color:#382a3f ;
+}
+
+.theme > div div:nth-child(3){
+    background-color: white;
+}
+
+
+
+
+
+nav a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+.wrapper{
+    margin: auto;
+    width: 80%;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.img{
+    height: 320px;
+    width: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img img{
+    height: 100%;
+    width: 60%;
+}
+
+
+
+#about > div{
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color:var(--secondary-color) ;
+    scroll-snap-align: center;
+}
+
+#about  > div >div{
+    flex: 1;
+}
+
+.about-me{
+    position: relative;
+    background-color:var(--about-color-outer) ;
+}
+
+.about-me  > div{
+    top: 30px;
+    width: inherit;
+    left: 30px;
+    position: absolute;
+    background-color: var(--about-color-inner);
+    border: 1px solid blue;
+    padding: 20px;
+    line-height: 40px;
+    opacity: .8;
+}
+
+
+.about-me > div div{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(0, 89, 255);
+    position: absolute;
+    opacity: 1;
+}
+
+.about-me > div div:nth-child(3){
+    top: -5px;
+    left: -5px;
+}
+
+.about-me > div div:nth-child(4){
+    top: -5px;
+    right: -5px;
+}
+
+
+.about-me > div div:nth-child(5){
+    bottom: -5px;
+    left: -5px;
+}
+
+
+.about-me > div div:nth-child(6){
+    bottom: -5px;
+    right: -5px;
+}
+
+
+
+
+ul li{
+    list-style-type: none;
+}
+
+#my-work{
+    background-color:var(--secondary-color) ;
+    border: 1px solid black;
+    min-height: 400px;
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+#contact{
+    background-color:var(--secondary-color) ;
+    margin: 70px;
+    text-align: center;
+}
+
+#my-work > div{
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.card{
+    background-color: var(--body-color);
+    font-size: 16px;
+    box-shadow: 4px 4px 5px black;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card video{
+    width: 300px;
+    height: 180px;
+    border-bottom: 3px dotted black;
+}
+
+.card div{
+    padding: 15px;
+    text-align: start;
+}
+
+.card p{
+    font-weight: 100;
+    margin-top: 15px;
+}
+
+.card a{
+    display: inline-block;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+
+
+#contact i{
+    font-size: 50px;
+}
+
+
+
+@media (max-width:310px) {
+    .wrapper{
+        width: 100%;
+        font-size: 16px;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+   .theme p{
+        display: inline-block;
+    }
+
+    .flex{
+        padding: 10px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+    span{
+        font-size: 25px;
+    }
+
+    #about > div{
+        display: block;
+        padding: 10px;
+        min-height: 200px;
+    }
+
+    .about-me{
+        margin-top: 30px;
+        height: 550px;
+    }
+
+    #my-work > div{
+        grid-gap: 40px;
+    }
+
+    .card{
+        width: 240px;
+        margin: auto;
+    }
+
+    .card video{
+        width: 235px;
+    }
+}
