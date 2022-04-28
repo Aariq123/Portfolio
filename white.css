@@ -1,0 +1,9 @@
+:root{
+    --body-color:white;
+    --secondary-color:rgb(223, 223, 223);
+    --text-color: black;
+    --about-color-outer:gray;
+    --about-color-inner:darkgray;
+    --theme-color:white;
+    --theme-div-border:black;
+}
